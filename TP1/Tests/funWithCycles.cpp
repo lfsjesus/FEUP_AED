@@ -6,8 +6,6 @@
 // ----------------------------------------------------------
 // Exercicio 1: Palindromos
 // ----------------------------------------------------------
-// TODO
-
 bool FunWithCycles::palindrome(const std::string & s) {
     int size = s.length();
     for (int i = 0; i < size / 2; i++) {
@@ -20,7 +18,6 @@ bool FunWithCycles::palindrome(const std::string & s) {
 // ----------------------------------------------------------
 // Exercicio 2: Frases Palindromo
 // ----------------------------------------------------------
-// TODO
 bool FunWithCycles::palindromeSentence(const std::string & s) {
     string text;
     for (int i = 0; i < s.length(); i++) {
@@ -45,7 +42,6 @@ bool FunWithCycles::palindromeSentence(const std::string & s) {
 // ----------------------------------------------------------
 // Exercicio 3: Numeros Interessantes
 // ----------------------------------------------------------
-// TODO
 int FunWithCycles::nextInterestingNumber(int n, int sum) {
     int i = n + 1;
     while (true) {
@@ -57,7 +53,6 @@ int FunWithCycles::nextInterestingNumber(int n, int sum) {
 }
 
 // Esta funcao auxiliar devera devolver a soma dos digitos de n
-// TODO
 int FunWithCycles::digitSum(int n) {
     int sum = 0;
 
@@ -72,7 +67,6 @@ int FunWithCycles::digitSum(int n) {
 // ----------------------------------------------------------
 // Exercicio 4: O Inverno esta a chegar
 // ----------------------------------------------------------
-// TODO
 int FunWithCycles::winter(const vector<int> & v) {
     vector<int> decrease;
     for (int i = 0; i < v.size() - 1; i++) {
@@ -102,21 +96,34 @@ int FunWithCycles::winter(const vector<int> & v) {
 // ----------------------------------------------------------
 
 // a) count
-// TODO
 int FunWithCycles::count(const vector<int> & v, int n) {
-    return 0;
+    int oc = 0;
+    for (int el : v) {
+        if (el == n) oc++;
+    }
+    return oc;
 }
 
 // b) hasDuplicates
-// TODO
 bool FunWithCycles::hasDuplicates(const vector<int> & v) {
+    int size = v.size();
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (v[j] == v[i]) return true;
+        }
+    }
     return false;
 }
 
 // c) removeDuplicates
-// TODO
 void FunWithCycles::removeDuplicates(vector<int> & v) {
-
+    vector<int> numbers;
+    for (int i = 0; i < v.size(); i++) {
+        if (count(numbers, v[i]) == 0) {
+            numbers.push_back(v[i]);
+        }
+    }
+    v = numbers;
 }
 
 // d) merge

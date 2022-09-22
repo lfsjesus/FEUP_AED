@@ -96,7 +96,7 @@ TEST(test_3, other) {
 // Exercicio 4: O Inverno esta a chegar
 // ----------------------------------------------------------
 */
-
+/*
 TEST(test_4, examples) {
     cout << "Testando 'winter'" << endl;
 
@@ -115,7 +115,7 @@ TEST(test_4, others) {
     EXPECT_EQ(6, FunWithCycles::winter({30,35,30,31,28,25,15,20,15,18,15,13,12,10,5,3,7}));
 }
 
-
+*/
 // ----------------------------------------------------------
 // Exercicio 5: Brincando com vectores
 // ----------------------------------------------------------
@@ -143,7 +143,6 @@ TEST(test_5, count_other) {
     EXPECT_EQ(0, FunWithCycles::count({42,42,42,42,42,42,42,42}, 41));
 }
 */
-
 /*
 // ------------------------------
 // b) hasDuplicates
@@ -172,7 +171,7 @@ TEST(test_5, hasDuplicates_other_false) {
 }
 */
 
-/*
+
 // ------------------------------
 // c) removeDuplicates
 TEST(test_5, removeDuplicates_examples) {
@@ -203,7 +202,7 @@ TEST(test_5, removeDuplicates_other) {
     vector<int> answer3 = {17,10,15,13,14,19,11,12,18,20};
     EXPECT_EQ(v3, answer3);
 }
-*/
+
 
 /*
 // ------------------------------
