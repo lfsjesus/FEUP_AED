@@ -83,11 +83,14 @@ int FunWithCycles::winter(const vector<int> & v) {
     int count = 0;
     for (int i = 0; i < decrease.size(); i++) {
         if (decrease[i] == 0)  {
-            max = count;
+            if (count > max) max = count;
             count = 0;
         }
         else if (decrease[i] == 1) {
             count++;
+            if (max == 0 && i == decrease.size() - 1) {
+                max = count;
+            }
         }
     }
     return max;
