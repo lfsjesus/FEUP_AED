@@ -127,9 +127,34 @@ void FunWithCycles::removeDuplicates(vector<int> & v) {
 }
 
 // d) merge
-// TODO
 vector<int> FunWithCycles::merge(const vector<int> & v1, const vector<int> & v2) {
     vector<int> ans;
+    int size1 = v1.size();
+    int size2 = v2.size();
+
+    int i = 0;
+    int j = 0;
+
+    while (i < size1 && j < size2) {
+        if (v1[i] < v2[j] ) {
+            ans.push_back(v1[i]);
+            i++;
+        }
+        else {
+            ans.push_back(v2[j]);
+            j++;
+        }
+    }
+
+    while (i < size1) {
+        ans.push_back(v1[i]);
+        i++;
+    }
+
+    while (j < size2) {
+        ans.push_back(v2[j]);
+        j++;
+    }
     return ans;
 }
 
