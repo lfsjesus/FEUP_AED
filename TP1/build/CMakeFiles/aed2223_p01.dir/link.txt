@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/aed2223_p01.dir/main.cpp.o CMakeFiles/aed2223_p01.dir/Tests/tests.cpp.o CMakeFiles/aed2223_p01.dir/Tests/funWithCycles.cpp.o  -o ../Tests/aed2223_p01  lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a -lpthread 

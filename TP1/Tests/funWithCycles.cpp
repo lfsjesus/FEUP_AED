@@ -163,22 +163,54 @@ vector<int> FunWithCycles::merge(const vector<int> & v1, const vector<int> & v2)
 // ----------------------------------------------------------
 
 // a) isPrime
-// TODO
+
 bool FunWithCycles::isPrime(int n) {
-    return false;
+    if (n > 1) {
+        for (int i = 2; i <= sqrt(n); i++) {
+            if ((n % i) == 0) return false;
+        }
+    }
+    return true;
 }
 
 // b) factorize
-// TODO
 vector<int> FunWithCycles::factorize(int n) {
     vector<int> ans;
+    int factor = 2;
+
+    if (isPrime(n)) ans.push_back(n);
+    else {
+        while (n > 1) {
+            if ((n % factor) == 0 && isPrime(factor)) {
+                ans.push_back(factor);
+                n = n / factor;
+            } else factor++;
+        }
+        return ans;
+    }
     return ans;
 }
 
 // c) listPrimes
-// TODO
 vector<int> FunWithCycles::listPrimes(int n) {
-    vector<int> ans;
+    vector<int> ans; // final vector
+    vector<int> isprime(10000001, true);
+    vector<int> SP(10000001);
+
+    isprime[0] = isprime[1] = false;
+
+    for (int i = 2; i <= n; i++) {
+        if (isprime[i]) {
+            ans.push_back(i);
+            SP[i] = i;
+        }
+
+        for (int j = 0; j < (int)ans.size() && i*ans[j] <= n && ans[j] <= SP[i]; j++) {
+            isprime[i*ans[j]] = false;
+            SP[i*ans[j]] = ans[j];
+        }
+    }
+
     return ans;
 }
 
