@@ -76,7 +76,7 @@ TEST(test_4, n100000) {
 // ----------------------------------------------------------
 // Exercicio 5: Analisando um rio
 // ----------------------------------------------------------
-
+/*
 TEST(test_5, examples) {
     cout << "Testando 'river'" << endl;
 
@@ -110,11 +110,11 @@ TEST(test_5, others_large) {
     EXPECT_EQ(readInt("river/output09.txt"), FunWithComplexity::river(v2, t, k));
 }
 
-
+*/
 // ----------------------------------------------------------
 // Exercicio 6: Espiral de Números
 // ----------------------------------------------------------
-/*
+
 TEST(test_6, examples) {
     cout << "Testando 'spiral'" << endl;
 
@@ -126,7 +126,7 @@ TEST(test_6, examples) {
     pair<int, int> p3 = {1, -1};
     EXPECT_EQ(p3, FunWithComplexity::spiral(3));
 }
-*/
+
 
 /*
 TEST(test_6, others_small) {
