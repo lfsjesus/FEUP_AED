@@ -8,7 +8,7 @@
 // ----------------------------------------------------------
 // Exercicio 1: Pesquisa Elementar
 // ----------------------------------------------------------
-// TODO
+
 int FunWithSearch::search(const vector<int> & v, int key) {
     int size = v.size();
     int lower = 0;
@@ -31,11 +31,22 @@ int FunWithSearch::search(const vector<int> & v, int key) {
 // ----------------------------------------------------------
 // Exercicio 2: Limite Inferior
 // ----------------------------------------------------------
-// TODO
-int FunWithSearch::lowerBound(const vector<int> &v, int key) {
-    return 0;
-}
 
+int FunWithSearch::lowerBound(const vector<int> &v, int key) {
+    int size = v.size();
+    int lower = 0;
+    int upper = size - 1;
+
+    while (lower < upper) {
+        int mid = lower + (upper - lower) / 2;
+        if (key <= v[mid]) upper = mid;
+        else {
+            lower = mid + 1;
+        }
+    }
+    if (v[lower] < key) return -1;
+    return lower;
+}
 // ----------------------------------------------------------
 // Exercicio 3: Intervalos
 // ----------------------------------------------------------

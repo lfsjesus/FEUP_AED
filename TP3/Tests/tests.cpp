@@ -18,7 +18,7 @@ vector<int> readIntVector(ifstream & f);
 vector<long long> readLongLongVector(ifstream & f);
 vector<pair<int,int>> readIntPairVector(ifstream & f);
 
-
+/*
 // ----------------------------------------------------------
 // Exercicio 1: Pesquisa Elementar
 // ----------------------------------------------------------
@@ -77,11 +77,11 @@ TEST(test_1, input05) {
     testSearch("search/input05.txt", "search/output05.txt");
 }
 
-
+*/
 // ----------------------------------------------------------
 // Exercicio 2: Limite Inferior
 // ----------------------------------------------------------
-/*
+
 TEST(test_2, examples) {
     cout << "Testando 'lowerBound'" << endl;
 
@@ -93,7 +93,6 @@ TEST(test_2, examples) {
     EXPECT_EQ(4, FunWithSearch::lowerBound({2,2,2,3,5,5,8,8,8,8}, 4));
     EXPECT_EQ(-1, FunWithSearch::lowerBound({2,2,2,3,5,5,8,8,8,8}, 9));
 }
-*/
 
 /*
 void testLowerBound(const string & inputFile, const string & outputFile) {
