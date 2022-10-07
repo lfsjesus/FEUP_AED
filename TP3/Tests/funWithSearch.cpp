@@ -50,9 +50,13 @@ int FunWithSearch::lowerBound(const vector<int> &v, int key) {
 // ----------------------------------------------------------
 // Exercicio 3: Intervalos
 // ----------------------------------------------------------
-// TODO
 int FunWithSearch::countRange(const vector<int> & v, int a, int b) {
-    return 0;
+    int low = lowerBound(v, a);
+    int up = lowerBound(v, b + 1); // Determines index of the next element after all elements <= b
+
+    if (up == -1) up = v.size();
+    if (low == -1) return 0;
+    return up - low;
 }
 
 // ----------------------------------------------------------

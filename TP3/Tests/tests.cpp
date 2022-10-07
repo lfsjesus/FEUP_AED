@@ -81,7 +81,7 @@ TEST(test_1, input05) {
 // ----------------------------------------------------------
 // Exercicio 2: Limite Inferior
 // ----------------------------------------------------------
-
+/*
 TEST(test_2, examples) {
     cout << "Testando 'lowerBound'" << endl;
 
@@ -93,7 +93,7 @@ TEST(test_2, examples) {
     EXPECT_EQ(4, FunWithSearch::lowerBound({2,2,2,3,5,5,8,8,8,8}, 4));
     EXPECT_EQ(-1, FunWithSearch::lowerBound({2,2,2,3,5,5,8,8,8,8}, 9));
 }
-
+*/
 /*
 void testLowerBound(const string & inputFile, const string & outputFile) {
     ifstream input(inputFile);
@@ -140,7 +140,7 @@ TEST(test_2, input05) {
 // ----------------------------------------------------------
 // Exercicio 3: Intervalos
 // ----------------------------------------------------------
-/*
+
 TEST(test_3, examples) {
     cout << "Testando 'countRange'" << endl;
 
@@ -151,9 +151,9 @@ TEST(test_3, examples) {
     EXPECT_EQ(0, FunWithSearch::countRange({2,2,2,3,5,5,8,8,8,8}, 6, 7));
     EXPECT_EQ(0, FunWithSearch::countRange({2,2,2,3,5,5,8,8,8,8}, 1, 1));
 }
-*/
 
-/*
+
+
 void testCountRange(const string & inputFile, const string & outputFile) {
     ifstream input(inputFile);
     vector<int> v = readIntVector(input);
@@ -170,7 +170,7 @@ void testCountRange(const string & inputFile, const string & outputFile) {
     int nranges = (int)ranges.size();
     for (int i=0; i<nranges; i++) {
         // Descomentar linha seguinte se quiser ver escrita pergunta a pergunta
-        //cout << "     * chamar com [" << ranges[i].first << "," << ranges[i].second << "] deve devolver " << answers[i] << endl;
+        cout << "     * chamar com [" << ranges[i].first << "," << ranges[i].second << "] deve devolver " << answers[i] << endl;
         EXPECT_EQ(answers[i], FunWithSearch::countRange(v, ranges[i].first, ranges[i].second));
     }
 }
@@ -195,7 +195,7 @@ TEST(test_3, input04) {
 TEST(test_3, input05) {
     testCountRange("countRange/input05.txt", "countRange/output05.txt");
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 4a: Viagem de mochila às costas (isPossible)
