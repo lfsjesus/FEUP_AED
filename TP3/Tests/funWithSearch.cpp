@@ -62,15 +62,28 @@ int FunWithSearch::countRange(const vector<int> & v, int a, int b) {
 // ----------------------------------------------------------
 // Exercicio 4a: Viagem de mochila às costas (isPossible)
 // ----------------------------------------------------------
-// TODO
 bool FunWithSearch::isPossible(const vector<int> & v, int x, int k) {
+    int sum1 = 0;
+    int partition = 1;
+
+    for (int i = 0; i < v.size(); i++) {
+        if (v[i] > x) return false;
+        if (sum1 + v[i] <= x) {
+            sum1 += v[i];
+        }
+        else {
+            sum1 = v[i];
+            partition++;
+        }
+    }
+    if (partition <= k) return true;
     return false;
 }
 
 // ----------------------------------------------------------
 // Exercicio 4b: Viagem de mochila às costas (partitions)
 // ----------------------------------------------------------
-// TODO
+
 int FunWithSearch::partitions(const vector<int> & v, int k) {
     return 0;
 }
