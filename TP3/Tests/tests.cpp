@@ -200,7 +200,7 @@ TEST(test_3, input05) {
 // ----------------------------------------------------------
 // Exercicio 4a: Viagem de mochila às costas (isPossible)
 // ----------------------------------------------------------
-
+/*
 TEST(test_4a, examples) {
     cout << "Testando 'isPossible'" << endl;
 
@@ -245,11 +245,11 @@ TEST(test_4a, others) {
                                             16,6,5,18,12,20,15,10,11,7,9,15,15,18,10,15}, 73, 6));
 }
 
-
+*/
 // ----------------------------------------------------------
 // Exercicio 4a: Viagem de mochila às costas (partitions)
 // ----------------------------------------------------------
-/*
+
 TEST(test_4b, examples) {
     cout << "Testando 'partitions'" << endl;
 
@@ -258,9 +258,7 @@ TEST(test_4b, examples) {
     EXPECT_EQ(27, FunWithSearch::partitions({7,9,3,8,2,2,9,4,3,4,7,9,9}, 3));
     EXPECT_EQ(18, FunWithSearch::partitions({7,9,3,8,2,2,9,4,3,4,7,9,9}, 5));
 }
-*/
 
-/*
 void testPartitions(const string & inputFile, const string & outputFile) {
     ifstream input(inputFile);
     vector<int> v = readIntVector(input);
@@ -301,7 +299,7 @@ TEST(test_4b, input04) {
 TEST(test_4b, input05) {
     testPartitions("partitions/input05.txt", "partitions/output05.txt");
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 5: Somas mais próximas

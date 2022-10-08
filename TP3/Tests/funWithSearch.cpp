@@ -85,7 +85,20 @@ bool FunWithSearch::isPossible(const vector<int> & v, int x, int k) {
 // ----------------------------------------------------------
 
 int FunWithSearch::partitions(const vector<int> & v, int k) {
-    return 0;
+    int s = 0;
+    for (int i = 0; i < v.size(); i++) {
+        s += v[i];
+    }
+
+    int low = 0;
+    int up = s;
+    while (low < up) {
+        int mid = low + (up - low)/2;
+        if (isPossible(v, mid, k)) up = mid;
+        else low = mid + 1;
+
+    }
+    return low;
 }
 
 // ----------------------------------------------------------
