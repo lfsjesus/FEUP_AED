@@ -51,14 +51,43 @@ unsigned FunSortProblem::minPlatforms (const vector<float> &arrival, const vecto
         if (platforms > final) final = platforms;
     }
 
-
     return final;
 }
 
-//TODO
-unsigned FunSortProblem::numInversions(vector <int> v) {
-    return 0;
+unsigned mergeSort(vector<int>&v){
+
+    if (v.size()==1) {
+        return 0;
+    }
+    vector<int>left(v.begin(),v.begin()+(v.size()-1)/2+1);
+
+    vector<int>right(v.begin()+(v.size() - 1)/2+1,v.end());
+
+    unsigned res = 0;
+
+    res += mergeSort(left);
+    res += mergeSort(right);
+
+    int i = 0, j = 0;
+
+    while (i < left.size() || j < right.size()) {
+        if ((left[i] <= right[j] && i < left.size()) || j == right.size()) {
+            v[i+j] = left[i];
+            i++;
+        }
+        else {
+            v[i+j] = right[j];
+            j++;
+            res += (left.size()-i);
+        }
+    }
+    return res;
 }
+
+unsigned FunSortProblem::numInversions(vector<int>v) {
+    return mergeSort(v);
+}
+
 
 // TODO
 void FunSortProblem::nutsBolts(vector<Piece> &nuts, vector<Piece> &bolts) {
