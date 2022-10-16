@@ -13,9 +13,19 @@ void FunSortProblem::expressLane(vector<Product> &products, unsigned k) {
         products.erase(products.begin() + k, products.end());
 }
 
-// TODO
+
 int FunSortProblem::minDifference(const vector<unsigned> &values, unsigned nc) {
-    return 0;
+    if (nc > values.size()) return -1;
+    vector<unsigned> sorted_values = values;
+    sort(sorted_values.begin(), sorted_values.end());
+    int min = INT_MIN;
+    for (int i = 0; i < sorted_values.size(); i++) {
+        if (sorted_values[nc + i - 1] - sorted_values[i] < min) {
+            min = sorted_values[nc + i - 1] - sorted_values[i];
+        }
+    }
+    return min;
+
 }
 
 
