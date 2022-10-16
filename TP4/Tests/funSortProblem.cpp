@@ -29,9 +29,30 @@ int FunSortProblem::minDifference(const vector<unsigned> &values, unsigned nc) {
 }
 
 
-// TODO
 unsigned FunSortProblem::minPlatforms (const vector<float> &arrival, const vector<float> &departure) {
-    return 0;
+    vector<float> sorted_arrival = arrival;
+    vector<float> sorted_departure = departure;
+    sort(sorted_arrival.begin(), sorted_arrival.end());
+    sort(sorted_departure.begin(), sorted_departure.end());
+
+    int final = 1;
+    int platforms = 1;
+    int a = 1;
+    int d = 0;
+    while (a < arrival.size() && d < arrival.size()) {
+        if (sorted_departure[d] >= sorted_arrival[a]) {
+            platforms++;
+            a++;
+        }
+        else if(sorted_arrival[a] > sorted_departure[d]) {
+            platforms--;
+            d++;
+        }
+        if (platforms > final) final = platforms;
+    }
+
+
+    return final;
 }
 
 //TODO
