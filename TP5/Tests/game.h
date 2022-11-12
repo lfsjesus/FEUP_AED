@@ -4,6 +4,8 @@
 #include "kid.h"
 #include <list>
 #include <string>
+#include <queue>
+
 using namespace std;
 
 class Game

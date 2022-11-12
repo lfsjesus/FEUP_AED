@@ -29,7 +29,7 @@ TEST(test, removeHiger) {
         EXPECT_EQ(5,*it);
     }
 }
-/*
+
 TEST(test, overlappingIntervals) {
     cout << endl << "Testing 'overlappingIntervals''" << endl;
     list<pair<int, int>> values1;
@@ -199,7 +199,7 @@ TEST(test, shuffle){
     if (it!=kids.end())
         EXPECT_EQ("Ines", it->getName());
 }
- */
+
 
 //----------------------------------------- BENCHMARK
 
