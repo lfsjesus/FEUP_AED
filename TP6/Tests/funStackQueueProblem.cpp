@@ -48,8 +48,9 @@ vector<int> FunStackQueueProblem::calculateSpan(vector<int> prices)
 }
 
 
-//TODO
 int FunStackQueueProblem::knightJumps(int initialPosx, int initialPosy, int targetPosx, int targetPosy, int n) {
+
+
     return -1;
 }
 
