@@ -63,8 +63,8 @@ string Dictionary::consult(string w1, WordMean& previous, WordMean& next) const 
             WordMean w = (*x);
             next = w;
         }
-        if (x-- != words.end()) {
-            previous = *x--;
+        if (--x != words.begin()) {
+            previous = *x;
         }
     }
     return "word not found";
